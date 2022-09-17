@@ -1,0 +1,8 @@
+<header>
+    {{question.question_text}}
+</header>
+<ul>
+    {% for answer in question.answers_set.all %}
+    <li>{{answer.choice_text}} -- {{answer.vote}}</li>
+    {% endfor %}
+</ul>
